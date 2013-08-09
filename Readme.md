@@ -11,7 +11,11 @@
 
 ## API
 
+## TODO
 
+- st. tib's day
+- holydays
+- format string `%x`
 
 ## License
 
