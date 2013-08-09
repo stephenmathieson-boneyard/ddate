@@ -1,0 +1,18 @@
+{
+  "name": "ddate",
+  "repo": "stephenmathieson/ddate",
+  "description": "javascript port of ddate(1)",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "stephenmathieson/day-of-year": "*"
+  },
+  "development": {
+    "component/assert": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}

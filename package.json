@@ -1,0 +1,33 @@
+{
+  "name": "ddate",
+  "version": "0.0.0",
+  "description": "javascript port of ddate(1)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "stephen mathieson",
+  "license": "MIT",
+  "dependencies": {
+    "day-of-year": "~0.1.0",
+    "is-leap-year": "~0.1.0"
+  },
+  "devDependencies": {
+    "better-assert": "~1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stephenmathieson/ddate.git"
+  },
+  "keywords": [
+    "discordian",
+    "poee",
+    "date"
+  ],
+  "bugs": {
+    "url": "https://github.com/stephenmathieson/ddate/issues"
+  }
+}
