@@ -13,7 +13,8 @@
   "license": "MIT",
   "dependencies": {
     "day-of-year": "~0.1.0",
-    "is-leap-year": "~0.1.0"
+    "is-leap-year": "~0.1.0",
+    "ordinal-number-suffix": "~0.1.0"
   },
   "devDependencies": {
     "better-assert": "~1.0.0"

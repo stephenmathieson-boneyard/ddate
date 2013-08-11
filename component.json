@@ -5,7 +5,8 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "stephenmathieson/day-of-year": "*"
+    "stephenmathieson/day-of-year": "*",
+    "stephenmathieson/ordinal-number-suffix": "*"
   },
   "development": {
     "component/assert": "*"

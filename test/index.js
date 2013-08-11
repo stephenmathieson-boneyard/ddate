@@ -113,81 +113,46 @@ describe('ddate', function () {
 
   });
 
+  describe('DiscordianDate#getDay', function () {
+    it('should return the correct day', function () {
+      assert(ddate(new Date(2013, 0, 12)).getDay() ===  12);
+      assert(ddate(new Date(2013, 1, 12)).getDay() ===  43);
+      assert(ddate(new Date(2013, 2, 12)).getDay() ===  71);
+      assert(ddate(new Date(2013, 3, 12)).getDay() ===  29);
+      assert(ddate(new Date(2013, 4, 12)).getDay() ===  59);
+      assert(ddate(new Date(2013, 5, 12)).getDay() ===  17);
+      assert(ddate(new Date(2013, 6, 12)).getDay() ===  47);
+      assert(ddate(new Date(2013, 7, 12)).getDay() ===  5);
+      assert(ddate(new Date(2013, 8, 12)).getDay() ===  36);
+      assert(ddate(new Date(2013, 9, 12)).getDay() ===  66);
+      assert(ddate(new Date(2013, 10, 12)).getDay() ===  24);
+      assert(ddate(new Date(2013, 11, 12)).getDay() ===  54);
+    });
+    it('should add endings when useLong==true', function () {
+      assert(ddate(new Date(2013, 0, 12)).getDay(true) ===  '12th');
+      assert(ddate(new Date(2013, 1, 12)).getDay(true) ===  '43rd');
+      assert(ddate(new Date(2013, 2, 12)).getDay(true) ===  '71st');
+      assert(ddate(new Date(2013, 3, 12)).getDay(true) ===  '29th');
+      assert(ddate(new Date(2013, 4, 12)).getDay(true) ===  '59th');
+      assert(ddate(new Date(2013, 5, 12)).getDay(true) ===  '17th');
+      assert(ddate(new Date(2013, 6, 12)).getDay(true) ===  '47th');
+      assert(ddate(new Date(2013, 7, 12)).getDay(true) ===  '5th');
+      assert(ddate(new Date(2013, 8, 12)).getDay(true) ===  '36th');
+      assert(ddate(new Date(2013, 9, 12)).getDay(true) ===  '66th');
+      assert(ddate(new Date(2013, 10, 12)).getDay(true) ===  '24th');
+      assert(ddate(new Date(2013, 11, 12)).getDay(true) ===  '54th');
+    });
+  });
+
+  describe('DiscordianDate#getWeekday', function () {
+    it('should return the correct weekday', function () {
+
+    });
+  });
+
 /*
-  describe('DiscordianDate#getDay');
-
-  describe('DiscordianDate#getWeekday');
-
   describe('DiscordianDate#getSeason');
 
   describe('DiscordianDate#getYear');
 */
-
-  describe('.ending()', function () {
-    it('should handle days ending in 0', function () {
-      assert(ddate.ending(0) === 'th');
-      assert(ddate.ending(10) === 'th');
-      assert(ddate.ending(20) === 'th');
-    });
-
-    it('should handle days ending in 1', function () {
-      assert(ddate.ending(1) === 'st');
-      assert(ddate.ending(11) === 'th');
-      assert(ddate.ending(21) === 'st');
-    });
-
-    it('should handle days ending in 2', function () {
-      assert(ddate.ending(2) === 'nd');
-      // differs from ddate(1)
-      assert(ddate.ending(12) === 'th');
-      assert(ddate.ending(22) === 'nd');
-    });
-
-    it('should handle days ending in 3', function () {
-      assert(ddate.ending(3) === 'rd');
-      assert(ddate.ending(13) === 'th');
-      assert(ddate.ending(23) === 'rd');
-    });
-
-    it('should handle days ending in 4', function () {
-      assert(ddate.ending(4) === 'th');
-      assert(ddate.ending(14) === 'th');
-      assert(ddate.ending(24) === 'th');
-    });
-
-    it('should handle days ending in 5', function () {
-      assert(ddate.ending(5) === 'th');
-      assert(ddate.ending(15) === 'th');
-      assert(ddate.ending(25) === 'th');
-    });
-
-    it('should handle days ending in 6', function () {
-      assert(ddate.ending(6) === 'th');
-      assert(ddate.ending(16) === 'th');
-      assert(ddate.ending(26) === 'th');
-    });
-
-    it('should handle days ending in 7', function () {
-      assert(ddate.ending(7) === 'th');
-      assert(ddate.ending(17) === 'th');
-      assert(ddate.ending(27) === 'th');
-    });
-
-    it('should handle days ending in 8', function () {
-      assert(ddate.ending(8) === 'th');
-      assert(ddate.ending(18) === 'th');
-      assert(ddate.ending(28) === 'th');
-    });
-
-    it('should handle days ending in 9', function () {
-      assert(ddate.ending(9) === 'th');
-      assert(ddate.ending(19) === 'th');
-      assert(ddate.ending(29) === 'th');
-    });
-
-    // NOTE: this differs from ddate(1)
-    it('should handle the 12th', function () {
-      assert(ddate.ending(12) === 'th');
-    });
-  });
 });

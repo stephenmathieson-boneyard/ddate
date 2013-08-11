@@ -1,32 +1,12 @@
 
 var isLeapYear = require('is-leap-year'),
-    dayOfYear = require('day-of-year');
+    dayOfYear = require('day-of-year'),
+    ordinal = require('ordinal-number-suffix');
 
 exports = module.exports = function (date) {
   return new DiscordianDate(date);
 };
 
-/**
- * Get the ending of the given `day`
- *
- * This doesn't actually match `ddate(1)`, as
- * it doesn't properly map `12` to `12th`.
- *
- * @api private
- * @param {Number} day
- * @return {String}
- */
-exports.ending = function (day) {
-  return Math.floor(day / 10) === 1
-      ? 'th'
-      : (day % 10 === 1
-        ? 'st'
-        : (day % 10 === 2
-          ? 'nd'
-          : (day % 10 === 3
-            ? 'rd'
-            : 'th')));
-};
 
 /**
  * The five Discordian seaons
@@ -151,13 +131,13 @@ DiscordianDate.prototype.format = function (format) {
  *
  * @api public
  * @param {Boolean} [useLong]
- * @return {String}
+ * @return {Number|String}
  */
 DiscordianDate.prototype.getDay = function (useLong) {
   var day = Math.floor(this._dayOfYear % 73);
 
   if (useLong) {
-    return day + exports.ending(day);
+    return ordinal(day);
   }
 
   return day;
